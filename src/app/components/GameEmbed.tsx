@@ -14,10 +14,16 @@ const GameEmbed = forwardRef<GameEmbedHandle>(function GameEmbed(_, ref) {
     const iframe = iframeRef.current;
     if (!iframe?.contentWindow) return;
 
+    const KEY_CODES: Record<string, number> = {
+      Enter: 13, Backspace: 8,
+      w: 87, a: 65, s: 83, d: 68,
+      z: 90, x: 88, q: 81, e: 69,
+    };
+
     const event = new KeyboardEvent(type, {
       key,
       code: key === "Enter" ? "Enter" : key === "Backspace" ? "Backspace" : `Key${key.toUpperCase()}`,
-      keyCode: key.charCodeAt(0),
+      keyCode: KEY_CODES[key] ?? key.charCodeAt(0),
       bubbles: true,
       cancelable: true,
     });
