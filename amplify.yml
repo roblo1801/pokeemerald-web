@@ -4,7 +4,7 @@ frontend:
     preBuild:
       commands:
         - curl -sL https://github.com/git-lfs/git-lfs/releases/download/v3.6.1/git-lfs-linux-amd64-v3.6.1.tar.gz | tar xz
-        - ./git-lfs-3.6.1/install.sh
+        - export PATH="$PWD/git-lfs-3.6.1:$PATH"
         - git lfs install
         - git lfs pull
         - npm ci
