@@ -1,0 +1,4 @@
+public/game/*.wasm filter=lfs diff=lfs merge=lfs -text
+public/game/*.pck filter=lfs diff=lfs merge=lfs -text
+public/game/*.wasm.gz filter=lfs diff=lfs merge=lfs -text
+public/game/*.pck.gz filter=lfs diff=lfs merge=lfs -text
