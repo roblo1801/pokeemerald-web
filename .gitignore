@@ -41,7 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # Godot web export (large binary files)
-public/game/*.html
-public/game/*.js
-public/game/*.wasm
-public/game/*.pck
+public/game/
